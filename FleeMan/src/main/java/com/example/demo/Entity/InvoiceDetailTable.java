@@ -33,4 +33,36 @@ public class InvoiceDetailTable {
     @Column(name = "addon_amt")
     private double addonAmt;
 
+	public long getInvdtlId() {
+		return invdtlId;
+	}
+
+	public void setInvdtlId(long invdtlId) {
+		this.invdtlId = invdtlId;
+	}
+
+	public InvoiceHeaderTable getInvoice() {
+		return invoice;
+	}
+
+	public void setInvoice(InvoiceHeaderTable invoice) {
+		this.invoice = invoice;
+	}
+
+	public AddOnMaster getAddon() {
+		return addon;
+	}
+
+	public void setAddon(AddOnMaster addon) {
+		this.addon = addon;
+	}
+
+	public double getAddonAmt() {
+		return addonAmt;
+	}
+
+	public void setAddonAmt(double addonAmt) {
+		this.addonAmt = addonAmt;
+	}
+
 }
