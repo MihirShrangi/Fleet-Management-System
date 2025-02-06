@@ -52,5 +52,4 @@ public class CityMaster {
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "state_id")
     private StateMaster state;
-
 }

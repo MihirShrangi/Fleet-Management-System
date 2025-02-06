@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 public class BookingHeaderTable {
 
-	@Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "booking_id")
 	private long bookingId;

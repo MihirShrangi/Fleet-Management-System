@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
+@ComponentScan(basePackages = "com.example.*")
 @SpringBootApplication
 @ComponentScan(basePackages = "com.example.**")
 @EntityScan(basePackages = "com.example.**")
