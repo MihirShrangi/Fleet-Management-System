@@ -1,4 +1,4 @@
-package com.example.demo.DTO;
+package com.example.demo.dto;
 
 public class ReturnCar_Type_MasterDTO {
     public String carType_name;

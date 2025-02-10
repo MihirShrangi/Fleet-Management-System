@@ -1,6 +1,8 @@
 package com.example.demo.Service;
 
 import com.example.demo.Repository.AirportRepository;
+import com.example.demo.Repository.projection.HubInfoProjection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +14,8 @@ public class AirportService {
     @Autowired
     private AirportRepository airportRepository;
 
-    public List<Object[]> getHubByAirport(Integer airportCode) {
-        List<Object[]> hubList = null;
+    public List<HubInfoProjection> getHubByAirport(String airportCode) {
+        List<HubInfoProjection> hubList = null;
         try {
 
             if (airportCode == null) {

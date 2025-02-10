@@ -1,4 +1,4 @@
-package com.example.demo.Services;
+package com.example.demo.Service;
 
 import com.example.demo.Repository.HubRepository;
 import com.example.demo.Repository.projection.HubInfoProjection;

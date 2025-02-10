@@ -23,39 +23,7 @@ public class BookingDetailTable {
     @JoinColumn(name = "addon_id")
     private AddOnMaster addon;
 
-    public long getBookingDetailId() {
-		return bookingDetailId;
-	}
-
-	public void setBookingDetailId(long bookingDetailId) {
-		this.bookingDetailId = bookingDetailId;
-	}
-
-	public BookingHeaderTable getBooking() {
-		return booking;
-	}
-
-	public void setBooking(BookingHeaderTable booking) {
-		this.booking = booking;
-	}
-
-	public AddOnMaster getAddon() {
-		return addon;
-	}
-
-	public void setAddon(AddOnMaster addon) {
-		this.addon = addon;
-	}
-
-	public double getAddonRate() {
-		return addonRate;
-	}
-
-	public void setAddonRate(double addonRate) {
-		this.addonRate = addonRate;
-	}
-
-	@Column(name = "addon_rate")
+    @Column(name = "addon_rate")
     private double addonRate;
 
 }

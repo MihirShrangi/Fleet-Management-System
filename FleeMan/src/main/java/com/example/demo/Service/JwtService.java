@@ -45,7 +45,7 @@ public class JwtService {
 
 			SecretKey secretkey = keyGen.generateKey();
 
-			System.out.println("Secret Key:" + secretkey.toString());
+			//System.out.println("Secret Key:" + secretkey.toString());
 
 			return Base64.getEncoder().encodeToString(secretkey.getEncoded());
 

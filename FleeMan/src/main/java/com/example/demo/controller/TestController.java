@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 
 
 @RestController
-public class LoginController {
+public class TestController {
 
 	@GetMapping("/home")
 	public String HomePage(HttpServletRequest request)

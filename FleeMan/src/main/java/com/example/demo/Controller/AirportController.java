@@ -1,9 +1,11 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
+import com.example.demo.Repository.projection.HubInfoProjection;
 import com.example.demo.Service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,15 +15,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1")
+@CrossOrigin(origins = "http://localhost:3000")
 public class AirportController {
 
     @Autowired
     private AirportService airportService;
 
     @GetMapping("airport")
-    public ResponseEntity<?> getHubByAirportCode(@RequestParam Integer airportCode) {
+    public ResponseEntity<?> getHubByAirportCode(@RequestParam String airportCode) {
         try {
-            List<Object[]> hubList = airportService.getHubByAirport(airportCode);
+            List<HubInfoProjection> hubList = airportService.getHubByAirport(airportCode);
             return new ResponseEntity<>(hubList, HttpStatus.OK);
 
         } catch (RuntimeException e) {

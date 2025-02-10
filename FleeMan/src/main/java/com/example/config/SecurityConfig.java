@@ -44,8 +44,8 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
 		http.csrf(customizer -> customizer.disable()).authorizeHttpRequests(request -> request
-		 			.requestMatchers("/home").permitAll()
-		 			.requestMatchers("/login").permitAll()
+//		 			.requestMatchers("/home").permitAll()
+//		 			.requestMatchers("/login").permitAll()
 //		 			.requestMatchers("/api/user/regiter").permitAll()
 				//.anyRequest().authenticated())
 		 		.anyRequest().permitAll())

@@ -7,9 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.client.RestTemplate;
 
 
-@ComponentScan(basePackages = "com.example.*")
+
 @SpringBootApplication
 @ComponentScan(basePackages = "com.example.**")
 @EntityScan(basePackages = "com.example.**")
@@ -24,6 +25,12 @@ public class FleeManApplication {
 	public BCryptPasswordEncoder encoder()
 	{
 		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
+	public RestTemplate getRestTemplate()
+	{
+		return new RestTemplate();
 	}
 
 	

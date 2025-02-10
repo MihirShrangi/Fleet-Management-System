@@ -1,6 +1,6 @@
-package com.example.demo.Services;
+package com.example.demo.Service;
 
-import com.example.demo.DTO.BookingDTO;
+import com.example.demo.dto.BookingDTO;
 import com.example.demo.Repository.GetCarDetailsFromBooking;
 import com.example.demo.Repository.projection.ReturnCarMasterDetailsFromBooking;
 import org.springframework.beans.factory.annotation.Autowired;

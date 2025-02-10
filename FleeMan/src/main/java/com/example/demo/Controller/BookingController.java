@@ -1,8 +1,9 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
 
 
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 
 @RestController
 @RequestMapping("/booking")
+@CrossOrigin(origins = "http://localhost:3000")
 public class BookingController {
 
 

@@ -1,9 +1,11 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
-import com.example.demo.DTO.BookingDTO;
+import com.example.demo.dto.BookingDTO;
 import com.example.demo.Repository.projection.ReturnCarMasterDetailsFromBooking;
-import com.example.demo.Services.GetDetailsOfCarFromBookingService;
+import com.example.demo.Service.GetDetailsOfCarFromBookingService;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-
+@CrossOrigin(origins = "http://localhost:3000")
 public class GetCarDetailsFromBookingController {
 
     @Autowired
